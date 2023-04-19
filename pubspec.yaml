@@ -1,0 +1,28 @@
+name: playground_new
+description: Exokames Playground Flutter Project
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.19.6 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  google_fonts: ^4.0.3
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  build_runner: ^2.3.3
+  flutter_gen_runner: ^5.3.0
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+
+flutter_gen:
+  output: lib/generated
