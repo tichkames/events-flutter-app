@@ -1,26 +1,28 @@
 import 'package:flutter/material.dart';
 
 import 'Design.dart';
-// import 'features/events/presentation/eventDetail/EventDetailListPage.dart';
-import 'features/events/presentation/eventDetail/EventDetailPage.dart';
-import 'features/events/presentation/eventList/model/Mock.dart';
+import 'di/Injection.dart';
+import 'routes/app_router.dart';
 
 void main() {
-  runApp(const MyApp());
+  configureDependencies();
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  MyApp({super.key});
+
+  final _appRouter = AppRouter();
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: 'Exokames Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData.light(
         useMaterial3: true,
       ).copyWith(textTheme: poppins),
-      home: EventDetailPage(event: events[0]),
+      routerConfig: _appRouter.config(),
     );
   }
 }

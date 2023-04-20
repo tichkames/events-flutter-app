@@ -1,9 +1,11 @@
+import 'package:auto_route/annotations.dart';
 import 'package:flutter/material.dart';
 
 import 'EventCategory.dart';
 import 'EventList.dart';
 import 'SearchBox.dart';
 
+@RoutePage()
 class EventListPage extends StatelessWidget {
   const EventListPage({Key? key}) : super(key: key);
 

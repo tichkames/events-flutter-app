@@ -1,3 +1,4 @@
+import 'package:auto_route/annotations.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../widgets/PositionedCTAButton.dart';
@@ -5,6 +6,7 @@ import '../eventList/model/Event.dart';
 import 'EventSection.dart';
 import 'SliverImageAppBar.dart';
 
+@RoutePage()
 class EventDetailPage extends StatelessWidget {
   const EventDetailPage({Key? key, required this.event}) : super(key: key);
 
