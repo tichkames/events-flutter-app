@@ -1,13 +1,6 @@
 class Event {
-  Event(
-    this.name,
-    this.image,
-    this.startDate,
-    this.endDate,
-    this.location,
-    this.cost,
-    this.discountCost,
-  );
+  Event(this.name, this.image, this.startDate, this.endDate, this.location,
+      this.cost, this.discountCost, this.category);
 
   final String name;
   final String image;
@@ -16,4 +9,5 @@ class Event {
   final String location;
   final double cost;
   final double? discountCost;
+  final String category;
 }
